@@ -29,48 +29,60 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(170, 170);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(170, 120);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(170, 170, 0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(230, 230);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // flowLayoutPanel2
+            // panel1
             // 
-            this.flowLayoutPanel2.CausesValidation = false;
-            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel1);
-            this.flowLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(400, 400);
-            this.flowLayoutPanel2.TabIndex = 1;
-            this.flowLayoutPanel2.WrapContents = false;
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 350);
+            this.panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(599, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
